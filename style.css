@@ -68,6 +68,7 @@ background-position-x: center;
 .aboutUs img {
   max-width: 80vw;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 section, footer {
   margin: 20px 0 20px 0;
