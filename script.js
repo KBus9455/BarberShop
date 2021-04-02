@@ -8,11 +8,11 @@ btnMenu.addEventListener("click", function (){
 })
 
 
-const products =document.querySelector('.products');
+const products =document.querySelector('.productsImg');
 const productsTab = ['fotos/s3.jpg', 'fotos/s2.jpg', 'fotos/s1.jpg'];
 products.src = productsTab[x];
 
-
+ 
 
 function change() {
     x++;
