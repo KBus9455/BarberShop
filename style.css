@@ -7,6 +7,7 @@ body {
   margin: 0 auto;
   text-align: center;
   max-width: 1500px;
+  font-weight: 300;
 }
 header {
   height: 100vh;
@@ -31,7 +32,7 @@ header i {
 }
 nav { 
   position: fixed;
-  left: -100%;
+  left: -120%;
   top: 20vh;
   font-size: 25px;
   transition: 0.3s;
@@ -58,8 +59,10 @@ nav ul li a{
   text-decoration: none;
   text-transform: uppercase;
   color: white;
-
+  font-weight: 300;
+  transition: 0.3s;
 }
+
 .active {
   left:0%;
 }
@@ -83,6 +86,7 @@ section, footer {
 h1{
   margin-bottom: 10px;
   font-size: 25px;
+  font-weight: 500;
 }
 h1:last-child{
   margin-top: 10px;
@@ -106,6 +110,11 @@ section div {
   font-size: 15px;
 }
 
+@media (max-width: 300px){
+  .logo p {
+    font-size: 50px;
+  }
+}
 @media (min-width: 750px) {
   .logo p {
     font-size: 80px;
@@ -133,13 +142,34 @@ table {
 
 
 @media (min-width: 1200px) {
+i.fa-bars{
+display: none;
+  }
+  nav{
+    background-color: rgba(10, 10, 10);
+width: 100vw;
+    left: 0;
+    top:0; 
+  }
+  nav ul {
+    display: flex;
+     max-width: 1500px;
+     background-color: transparent;
+margin: 0 auto;
+  }
+  nav ul li:hover a {
+    color: rgb(51, 51, 170);
+  }
+    nav ul li {
+      width: 25%;
+    }
+
   .logo p {
     font-size: 100px;
+    margin-top: 50px;
   }
-  header i {
-    right: 15px;
-    top: 15px;
-    font-size: 45px;
+  .imgContainer {
+    height: calc(80vh - 50px);
   }
   section.mainInformation {
     display: flex;
@@ -153,11 +183,16 @@ table {
 .description{
   margin:20px;
 }
-.aboutUs, .products, .saloon{
+.aboutUs,.saloon{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+.products{
+  position: relative;
+  margin: 0 auto;
+  max-width: 50%;
 }
 .aboutUs img {
   margin-bottom: 0px;
@@ -177,14 +212,22 @@ table {
   align-content: center;
 }
 footer h1 {
-
   font-size: 60px;
 }
 
-nav ul {
-text-align: left;
-width: 30vw;
-text-indent: 20px;
-
+.productsImgWrapper{
+  position: relative;
 }
+
+p.productsDescription {
+  color: white;
+  position: absolute;
+  z-index: 5; 
+  width: 60%;
+  height: 80%;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+}
+
 }
