@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <title>Barber Studio - Fryzjerstwo Męskie</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -31,7 +32,7 @@
   </header>
   <main>
 
-    <section id="s1" class="mainInformation">
+    <section data-section="s1" class="mainInformation">
       <div class="aboutUs">
         <h1>Poznaj nas bliżej</h1>
         <div class="description">Lorem aspernatur quas maxime dolorum omnis error nesciunt repellat odit, quod ab ad
@@ -48,7 +49,7 @@
       </div>
       </div>
     </section>
-    <section class="mainInformation">
+    <section class="mainInformation2">
       <div class="products">
         <h1>Używamy najlepszych produktów </h1>
         <div class="description">Lorem ipsum d aspernatur quas maxime dolorum omnis error nesciunt repellat odit,
@@ -60,7 +61,7 @@
       </div>
     </section>
     <div class="wrapperSection">
-      <section id="s2" class="prices">
+      <section data-section="s2" class="prices">
         <h1>Cennik</h1>
         <div>
           <table>
@@ -98,7 +99,7 @@
         </div>
 
       </section>
-      <section id="s3" class="contact">
+      <section data-section="s3" class="contact">
         <h1>Kontakt</h1>
         <table>
           <tr>
@@ -127,17 +128,17 @@
         <img class="vectorArtMan" src="fotos/vector-3071686_1280.png" alt="picture1">
       </div>
     </div>
-    <section id="s4" class="map">
+    <section data-section="s4" class="map">
       <h1>Znajdziesz nas tutaj</h1>
       <div>
         <div>
           ul. 3 maja 23 <br>
           25-045 Rzeszów
         </div>
-        <div class=>
+        <div>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2562.7611518206636!2d21.999148116311268!3d50.034571225123344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473cfb004adbb909%3A0xe768451e8981f1b4!2s3%20Maja%2023%2C%2035-030%20Rzesz%C3%B3w!5e0!3m2!1spl!2spl!4v1631125774580!5m2!1spl!2spl"
-            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+            width="100%" height="800" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
       </div>
     </section>
   </main>
@@ -145,9 +146,15 @@
     <h1>Do zobaczenia!</h1>
 
   </footer>
-
+  <script>
+    $('nav ul li').on('click', function () {
+      const goToSection = "[data-section=" + $(this).attr('class') + "]";
+      $('body, html').animate({
+        scrollTop: $(goToSection).offset().top - 100
+      }, 200)
+    })
+  </script>
   <script src="https://kit.fontawesome.com/3d651c86d2.js" crossorigin="anonymous"></script>
-  <script src="jquery-3.3.1.min.js"></script>
   <script src="script.js"></script>
 </body>
 
