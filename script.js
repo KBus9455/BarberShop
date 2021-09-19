@@ -1,11 +1,26 @@
 const btnMenu = document.querySelector("i");
 const listMenu = document.querySelector("nav");
+const aboutUsSection = document.querySelector('.mainInformation');
+const productsSection = document.querySelector('.mainInformation2');
+
+window.addEventListener('scroll', function(){
+if (aboutUsSection.getBoundingClientRect().top < window.innerHeight){
+aboutUsSection.classList.add('animate__fadeInLeft');
+};
+
+if (productsSection.getBoundingClientRect().top < window.innerHeight){
+products.classList.add('animate__fadeInLeft');
+}
+});
+
+
 
 let x = 0;
 let w = window.innerWidth;
+
 btnMenu.addEventListener("click", function () {
     listMenu.classList.toggle("active");
-})
+});
 
 const productsWrap = document.querySelector('.productsImgWrapper');
 const products = document.querySelector('.productsImg');
