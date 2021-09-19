@@ -4,12 +4,14 @@ const aboutUsSection = document.querySelector('.mainInformation');
 const productsSection = document.querySelector('.mainInformation2');
 
 window.addEventListener('scroll', function(){
-if (aboutUsSection.getBoundingClientRect().top < window.innerHeight){
-aboutUsSection.classList.add('animate__fadeInLeft');
+if (aboutUsSection.getBoundingClientRect().top+300 < window.innerHeight){
+aboutUsSection.classList.add('animate__zoomIn');
+aboutUsSection.style.opacity = "1";
 };
 
-if (productsSection.getBoundingClientRect().top < window.innerHeight){
-products.classList.add('animate__fadeInLeft');
+if (productsSection.getBoundingClientRect().top+300 < (window.innerHeight)){
+productsSection.classList.add('animate__zoomIn');
+productsSection.style.opacity = "1";
 }
 });
 

@@ -216,6 +216,10 @@ iframe{
   section.mainInformation {
     display: flex;
     flex-direction: row;
+    opacity:0;
+  }
+  .mainInformation2{
+       opacity:0;
   }
 
   .mainInformation img {
